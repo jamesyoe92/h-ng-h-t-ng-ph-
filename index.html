@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mua Nồi Cơm Điện Giá Rẻ</title>
+  <title>Hóng Biến Đường Phố</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -16,10 +16,11 @@
       color: white;
       padding: 15px;
     }
-    video {
+    iframe {
       max-width: 90%;
       margin: 20px auto;
       border-radius: 10px;
+      border: none;
     }
 
     /* Popup */
@@ -53,16 +54,19 @@
 <body>
   <h1>Hóng Biến Đường Phố</h1>
 
-  <video controls>
-    <source src="SaveTik.co_7527622525291990312.mp4" type="video/mp4">
-    Trình duyệt của bạn không hỗ trợ video.
-  </video>
+  <!-- Video từ Google Drive -->
+  <iframe src="https://drive.google.com/file/d/1Jiy-Mv4RNf5MxXdq3ERnIeQLzW6uCCaJ/preview" 
+          width="640" 
+          height="360" 
+          allow="autoplay">
+  </iframe>
 
   <!-- Popup -->
   <div class="popup" id="popup">
     <div class="popup-content">
       <h2>Siêu Deal Shopee</h2>
-      <a href="https://s.shopee.vn/1VpzaRTRq6" target="_blank" onclick="hidePopup()">Đóng</a>
+      <!-- Nút "Đóng" đồng thời mở Shopee -->
+      <a href="https://s.shopee.vn/1VpzaRTRq6" target="_blank" onclick="closePopup()">Đóng</a>
     </div>
   </div>
 
@@ -70,12 +74,10 @@
     function showPopup() {
       document.getElementById('popup').style.display = 'flex';
     }
-
-    function hidePopup() {
+    function closePopup() {
       document.getElementById('popup').style.display = 'none';
     }
-
-    // Tự động hiện popup sau khi tải trang 2 giây
+    // Hiện popup sau 2 giây
     window.onload = function() {
       setTimeout(showPopup, 2000);
     }
