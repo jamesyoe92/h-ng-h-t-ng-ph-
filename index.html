@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mua Nồi Cơm Điện Giá Rẻ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      background: #ff5722;
+      color: white;
+      padding: 15px;
+    }
+    video {
+      max-width: 90%;
+      margin: 20px auto;
+      border-radius: 10px;
+    }
 
+    /* Popup */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+    .popup-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 300px;
+    }
+    .popup-content a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: white;
+      background: #ff5722;
+      padding: 10px 20px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hóng Biến Đường Phố</h1>
+
+  <video controls>
+    <source src="SaveTik.co_7527622525291990312.mp4" type="video/mp4">
+    Trình duyệt của bạn không hỗ trợ video.
+  </video>
+
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2>Siêu Deal Shopee</h2>
+      <a href="https://s.shopee.vn/1VpzaRTRq6" target="_blank" onclick="hidePopup()">Đóng</a>
+    </div>
+  </div>
+
+  <script>
+    function showPopup() {
+      document.getElementById('popup').style.display = 'flex';
+    }
+
+    function hidePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+
+    // Tự động hiện popup sau khi tải trang 2 giây
+    window.onload = function() {
+      setTimeout(showPopup, 2000);
+    }
+  </script>
+</body>
+</html>
