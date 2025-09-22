@@ -16,11 +16,11 @@
       color: white;
       padding: 15px;
     }
-    iframe {
+    video {
       max-width: 90%;
       margin: 20px auto;
       border-radius: 10px;
-      border: none;
+      display: block;
     }
 
     /* Popup */
@@ -54,18 +54,16 @@
 <body>
   <h1>Hóng Biến Đường Phố</h1>
 
-  <!-- Video từ Google Drive -->
-  <iframe src="https://drive.google.com/file/d/1A3huYdzruVdkRKvn5jDCFlhGtGzCye/preview" 
-          width="640" 
-          height="360" 
-          allow="autoplay">
-  </iframe>
+  <!-- Video local -->
+  <video width="640" height="360" controls>
+    <source src="IMG_7051.MP4" type="video/mp4">
+    Trình duyệt của bạn không hỗ trợ video.
+  </video>
 
   <!-- Popup -->
   <div class="popup" id="popup">
     <div class="popup-content">
       <h2>Siêu Deal Shopee</h2>
-      <!-- Nút "Đóng" đồng thời mở Shopee -->
       <a href="https://s.shopee.vn/1VpzaRTRq6" target="_blank" onclick="closePopup()">Đóng</a>
     </div>
   </div>
